@@ -75,10 +75,10 @@ const videos = [
     author: 'Peter Attia MD & Joel Jamieson',
   },
   {
-    id: 'dbcM7j7iVCU',
+    id: 'gSmbAmIpvBo',
     alt: 'Huberman HRV tool thumbnail',
-    title: 'Simple Tool to Boost Heart Rate Variability (HRV)',
-    author: 'Dr. Andrew Huberman',
+    title: 'Best explanation of HRV and RMSSD, and how it’s measured',
+    author: 'Dr Matt & Dr Mike',
   },
   {
     id: 'nGqIO-ZBsFg',

@@ -427,16 +427,11 @@ export default function Home() {
           <br />
           This site aggregates peer-reviewed literature for educational purposes. Not medical advice.
           <br />
-          Contact: rose@hrv.live
+          Contact: <a href="mailto:HRVdotLIVE@gmail.com">HRVdotLIVE@gmail.com</a>
           <br />
           Live display: <a href="https://hrv.live">hrv.live</a>
           <div className="updated">Last updated: August 2026</div>
         </footer>
-        <div className="email-footer">
-          <div className="label">
-            Email: <a href="mailto:HRVdotLIVE@gmail.com">HRVdotLIVE@gmail.com</a>
-          </div>
-        </div>
       </main>
     </>
   );

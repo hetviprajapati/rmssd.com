@@ -218,8 +218,5 @@ footer {
   .label {
     font-size: 12px;
     margin-top: 6px;
-    a {
-      color: #551a8b;
-    }
   }
 }

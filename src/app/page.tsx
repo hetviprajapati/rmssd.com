@@ -90,10 +90,16 @@ const videos = [
     author: 'Dr Matt & Dr Mike',
   },
   {
-    id: 'nGqIO-ZBsFg',
-    alt: 'Huberman and Galpin HRV thumbnail',
-    title: 'How to Improve Your HRV',
-    author: 'Dr. Andy Galpin & Dr. Andrew Huberman',
+    id: '2M0yhiUmHpo',
+    alt: 'Huberman HRV thumbnail',
+    title: 'Simple Tool to Boost Heart Rate Variability (HRV)',
+    author: 'Dr. Andrew Huberman',
+  },
+  {
+    id: 'ZoOBrc589iM',
+    alt: 'Marco HRV thumbnail',
+    title: 'How to use Heart Rate Variability (HRV)',
+    author: 'Dr. Marco Altini',
   },
 ];
 
@@ -123,10 +129,12 @@ export default function Home() {
           </div>
         </header>
 
-        <h1>RMSSD</h1>
+        <div className="hero-section">
+          <h1>RMSSD</h1>
 
-        <div className="subtitle">
-          Root Mean Square of Successive Differences — the primary time-domain measure of parasympathetic (vagal) activity
+          <div className="subtitle">
+            Root Mean Square of Successive Differences — the primary time-domain measure of parasympathetic (vagal) activity
+          </div>
         </div>
 
         <h2 style={{ marginTop: '34px' }}>Watch: HRV Explained by Leading Researchers</h2>

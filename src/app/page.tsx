@@ -137,7 +137,7 @@ export default function Home() {
           </div>
         </div>
 
-        <h2 style={{ marginTop: '34px' }}>Watch: HRV Explained by Leading Researchers</h2>
+        <h2>Watch: HRV Explained by Leading Researchers</h2>
 
         <p>Video breakdowns of HRV and RMSSD from researchers and physicians who cover the topic in depth.</p>
 

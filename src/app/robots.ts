@@ -8,5 +8,7 @@ export default function robots(): MetadataRoute.Robots {
     },
 
     sitemap: 'https://rmssd.com/sitemap.xml',
+
+    host: 'https://rmssd.com',
   };
 }

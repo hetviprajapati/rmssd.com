@@ -4,8 +4,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: 'https://rmssd.com/',
-      changeFrequency: 'monthly',
-      priority: 1,
     },
   ];
 }

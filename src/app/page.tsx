@@ -1,79 +1,128 @@
 import './page.css';
 import VideoCard from '../components/home/VideoCard';
+import { JsonLd } from '../components/shared/JsonLd/JsonLd';
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
+
+  '@graph': [
     {
-      '@type': 'Question',
-      name: 'What is a good RMSSD score?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "There is no single universal 'good' RMSSD — normal short-term RMSSD in healthy adults ranges roughly 19-75ms (average ~42ms), but the number falls steadily with age, so 30ms can be average for someone in their 40s and below average for someone in their 20s. Your own trend over time matters more than comparing to a population average.",
+      '@type': 'WebSite',
+
+      '@id': 'https://rmssd.com/#website',
+
+      name: 'RMSSD.com',
+
+      url: 'https://rmssd.com/',
+
+      description: 'A reference resource covering RMSSD, heart rate variability, calculation methods, measurement, and interpretation.',
+    },
+
+    {
+      '@type': 'Article',
+
+      '@id': 'https://rmssd.com/#article',
+
+      headline: 'RMSSD: Formula, Normal Ranges by Age & Clinical Meaning',
+
+      description:
+        'A comprehensive guide to RMSSD, including its formula, normal ranges by age, clinical meaning, comparison with SDNN and pNN50, factors affecting readings, and measurement methods.',
+
+      url: 'https://rmssd.com/',
+
+      dateModified: '2026-08-01',
+
+      author: {
+        '@type': 'Person',
+        name: 'Rose M',
+      },
+
+      publisher: {
+        '@type': 'Organization',
+        name: 'RMSSD.com',
+        url: 'https://rmssd.com/',
+      },
+
+      mainEntityOfPage: {
+        '@id': 'https://rmssd.com/#webpage',
+      },
+
+      isPartOf: {
+        '@id': 'https://rmssd.com/#website',
+      },
+
+      about: {
+        '@type': 'Thing',
+        name: 'Root Mean Square of Successive Differences',
+        alternateName: 'RMSSD',
       },
     },
+
     {
-      '@type': 'Question',
-      name: 'Is a higher RMSSD always better?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Generally higher RMSSD reflects greater parasympathetic (vagal) tone and better recovery capacity, but extremely high or erratic readings can also result from arrhythmia or measurement artifact, so context matters more than the raw number.',
+      '@type': 'WebPage',
+
+      '@id': 'https://rmssd.com/#webpage',
+
+      name: 'RMSSD: Formula, Normal Ranges by Age & Clinical Meaning',
+
+      url: 'https://rmssd.com/',
+
+      isPartOf: {
+        '@id': 'https://rmssd.com/#website',
+      },
+
+      mainEntity: {
+        '@id': 'https://rmssd.com/#article',
       },
     },
+
     {
-      '@type': 'Question',
-      name: "What's the difference between RMSSD and SDNN?",
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'SDNN reflects overall RR interval variability across a recording, capturing both short and longer-term rhythms. RMSSD specifically isolates short-term, beat-to-beat variation and is more directly tied to parasympathetic/vagal activity.',
+      '@type': 'FAQPage',
+
+      '@id': 'https://rmssd.com/#faq',
+
+      url: 'https://rmssd.com/',
+
+      isPartOf: {
+        '@id': 'https://rmssd.com/#website',
       },
-    },
-    {
-      '@type': 'Question',
-      name: 'Does RMSSD change throughout the day?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. RMSSD shifts in real time with breathing rate, posture, stress, physical activity, and autonomic load. Most wearables only report an overnight average, which smooths out these acute daytime fluctuations.',
-      },
+
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What is a good RMSSD score?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "There is no single universal 'good' RMSSD — normal short-term RMSSD in healthy adults ranges roughly 19-75ms (average ~42ms), but the number falls steadily with age, so 30ms can be average for someone in their 40s and below average for someone in their 20s. Your own trend over time matters more than comparing to a population average.",
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Is a higher RMSSD always better?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Generally higher RMSSD reflects greater parasympathetic (vagal) tone and better recovery capacity, but extremely high or erratic readings can also result from arrhythmia or measurement artifact, so context matters more than the raw number.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: "What's the difference between RMSSD and SDNN?",
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'SDNN reflects overall RR interval variability across a recording, capturing both short and longer-term rhythms. RMSSD specifically isolates short-term, beat-to-beat variation and is more directly tied to parasympathetic/vagal activity.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Does RMSSD change throughout the day?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. RMSSD shifts in real time with breathing rate, posture, stress, physical activity, and autonomic load. Most wearables only report an overnight average, which smooths out these acute daytime fluctuations.',
+          },
+        },
+      ],
     },
   ],
-};
-
-const articleJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-
-  headline: 'RMSSD: Formula, Normal Ranges by Age & Clinical Meaning',
-
-  description:
-    'A comprehensive guide to RMSSD, including its formula, normal ranges by age, clinical meaning, comparison with SDNN and pNN50, factors affecting readings, and measurement methods.',
-
-  url: 'https://rmssd.com/',
-
-  dateModified: '2026-08-01',
-
-  author: {
-    '@type': 'Person',
-    name: 'Rose M',
-  },
-
-  publisher: {
-    '@type': 'Organization',
-    name: 'RMSSD.com',
-    url: 'https://rmssd.com/',
-  },
-
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': 'https://rmssd.com/',
-  },
-
-  about: {
-    '@type': 'Thing',
-    name: 'Root Mean Square of Successive Differences',
-    alternateName: 'RMSSD',
-  },
 };
 
 const videos = [
@@ -106,19 +155,7 @@ const videos = [
 export default function Home() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(articleJsonLd),
-        }}
-      />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(jsonLd),
-        }}
-      />
+      <JsonLd data={jsonLd} />
 
       <main className="wrap">
         <header className="site">
